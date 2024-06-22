@@ -11,12 +11,15 @@
 		0362D9A72C2567240004E896 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9A62C2567240004E896 /* SceneDelegate.swift */; };
 		0362D9AE2C2567260004E896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0362D9AD2C2567260004E896 /* Assets.xcassets */; };
 		0362D9B12C2567260004E896 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0362D9B02C2567260004E896 /* Base */; };
-		0362D9C02C2579120004E896 /* LoanSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9BF2C2579120004E896 /* LoanSummary.swift */; };
-		0362D9C22C2579240004E896 /* LoanProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9C12C2579240004E896 /* LoanProfile.swift */; };
-		0362D9C42C2579320004E896 /* LoanCollateral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9C32C2579320004E896 /* LoanCollateral.swift */; };
-		0362D9C62C2579410004E896 /* LoanDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9C52C2579410004E896 /* LoanDocuments.swift */; };
-		0362D9C82C25796C0004E896 /* LoanPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9C72C25796C0004E896 /* LoanPayment.swift */; };
+		0362D9C22C2579240004E896 /* Borrower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9C12C2579240004E896 /* Borrower.swift */; };
+		0362D9C42C2579320004E896 /* Collateral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9C32C2579320004E896 /* Collateral.swift */; };
+		0362D9C62C2579410004E896 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9C52C2579410004E896 /* Document.swift */; };
+		0362D9C82C25796C0004E896 /* RepaymentSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9C72C25796C0004E896 /* RepaymentSchedule.swift */; };
 		0362D9CB2C257A750004E896 /* LoanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9CA2C257A750004E896 /* LoanListViewController.swift */; };
+		0362D9CD2C2592B10004E896 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9CC2C2592B10004E896 /* Service.swift */; };
+		0362D9CF2C2592B70004E896 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9CE2C2592B70004E896 /* Request.swift */; };
+		0362D9D12C2593C00004E896 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9D02C2593C00004E896 /* Endpoint.swift */; };
+		0362D9D32C25E65D0004E896 /* LoanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9D22C25E65D0004E896 /* LoanList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +29,15 @@
 		0362D9AD2C2567260004E896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0362D9B02C2567260004E896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0362D9B22C2567260004E896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0362D9BF2C2579120004E896 /* LoanSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanSummary.swift; sourceTree = "<group>"; };
-		0362D9C12C2579240004E896 /* LoanProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanProfile.swift; sourceTree = "<group>"; };
-		0362D9C32C2579320004E896 /* LoanCollateral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanCollateral.swift; sourceTree = "<group>"; };
-		0362D9C52C2579410004E896 /* LoanDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDocuments.swift; sourceTree = "<group>"; };
-		0362D9C72C25796C0004E896 /* LoanPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanPayment.swift; sourceTree = "<group>"; };
+		0362D9C12C2579240004E896 /* Borrower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Borrower.swift; sourceTree = "<group>"; };
+		0362D9C32C2579320004E896 /* Collateral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collateral.swift; sourceTree = "<group>"; };
+		0362D9C52C2579410004E896 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		0362D9C72C25796C0004E896 /* RepaymentSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepaymentSchedule.swift; sourceTree = "<group>"; };
 		0362D9CA2C257A750004E896 /* LoanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListViewController.swift; sourceTree = "<group>"; };
+		0362D9CC2C2592B10004E896 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		0362D9CE2C2592B70004E896 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		0362D9D02C2593C00004E896 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		0362D9D22C25E65D0004E896 /* LoanList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +93,11 @@
 		0362D9B92C25690F0004E896 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0362D9BF2C2579120004E896 /* LoanSummary.swift */,
-				0362D9C12C2579240004E896 /* LoanProfile.swift */,
-				0362D9C32C2579320004E896 /* LoanCollateral.swift */,
-				0362D9C52C2579410004E896 /* LoanDocuments.swift */,
-				0362D9C72C25796C0004E896 /* LoanPayment.swift */,
+				0362D9D22C25E65D0004E896 /* LoanList.swift */,
+				0362D9C12C2579240004E896 /* Borrower.swift */,
+				0362D9C32C2579320004E896 /* Collateral.swift */,
+				0362D9C52C2579410004E896 /* Document.swift */,
+				0362D9C72C25796C0004E896 /* RepaymentSchedule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +119,9 @@
 		0362D9BC2C2569230004E896 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
+				0362D9CC2C2592B10004E896 /* Service.swift */,
+				0362D9CE2C2592B70004E896 /* Request.swift */,
+				0362D9D02C2593C00004E896 /* Endpoint.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -213,14 +222,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0362D9C22C2579240004E896 /* LoanProfile.swift in Sources */,
-				0362D9C02C2579120004E896 /* LoanSummary.swift in Sources */,
+				0362D9C22C2579240004E896 /* Borrower.swift in Sources */,
 				0362D9A52C2567240004E896 /* AppDelegate.swift in Sources */,
-				0362D9C82C25796C0004E896 /* LoanPayment.swift in Sources */,
-				0362D9C42C2579320004E896 /* LoanCollateral.swift in Sources */,
-				0362D9C62C2579410004E896 /* LoanDocuments.swift in Sources */,
+				0362D9C82C25796C0004E896 /* RepaymentSchedule.swift in Sources */,
+				0362D9C42C2579320004E896 /* Collateral.swift in Sources */,
+				0362D9CD2C2592B10004E896 /* Service.swift in Sources */,
+				0362D9C62C2579410004E896 /* Document.swift in Sources */,
+				0362D9CF2C2592B70004E896 /* Request.swift in Sources */,
 				0362D9A72C2567240004E896 /* SceneDelegate.swift in Sources */,
+				0362D9D12C2593C00004E896 /* Endpoint.swift in Sources */,
 				0362D9CB2C257A750004E896 /* LoanListViewController.swift in Sources */,
+				0362D9D32C25E65D0004E896 /* LoanList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

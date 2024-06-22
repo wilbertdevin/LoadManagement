@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Collateral: Codable {
+    let type: String
+    let value: Double
+}
