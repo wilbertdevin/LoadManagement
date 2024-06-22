@@ -20,6 +20,11 @@
 		0362D9CF2C2592B70004E896 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9CE2C2592B70004E896 /* Request.swift */; };
 		0362D9D12C2593C00004E896 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9D02C2593C00004E896 /* Endpoint.swift */; };
 		0362D9D32C25E65D0004E896 /* LoanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9D22C25E65D0004E896 /* LoanList.swift */; };
+		0362D9D52C2661450004E896 /* LoanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9D42C2661450004E896 /* LoanViewModel.swift */; };
+		0362D9D72C2661750004E896 /* LoanListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9D62C2661750004E896 /* LoanListTableViewCell.swift */; };
+		0362D9D92C2661AA0004E896 /* LoanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9D82C2661AA0004E896 /* LoanListViewModel.swift */; };
+		0362D9DB2C2696610004E896 /* LoanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9DA2C2696610004E896 /* LoanDetailViewController.swift */; };
+		0362D9DF2C26CB650004E896 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9DE2C26CB650004E896 /* Constraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		0362D9CE2C2592B70004E896 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		0362D9D02C2593C00004E896 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		0362D9D22C25E65D0004E896 /* LoanList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanList.swift; sourceTree = "<group>"; };
+		0362D9D42C2661450004E896 /* LoanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewModel.swift; sourceTree = "<group>"; };
+		0362D9D62C2661750004E896 /* LoanListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListTableViewCell.swift; sourceTree = "<group>"; };
+		0362D9D82C2661AA0004E896 /* LoanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListViewModel.swift; sourceTree = "<group>"; };
+		0362D9DA2C2696610004E896 /* LoanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDetailViewController.swift; sourceTree = "<group>"; };
+		0362D9DE2C26CB650004E896 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,21 +83,12 @@
 				0362D9BE2C2569360004E896 /* Resources */,
 				0362D9BD2C25692A0004E896 /* Managers */,
 				0362D9BC2C2569230004E896 /* APIClient */,
-				0362D9BB2C25691A0004E896 /* ViewModels */,
-				0362D9BA2C2569150004E896 /* Views */,
 				0362D9B92C25690F0004E896 /* Models */,
-				0362D9B82C2569070004E896 /* Controllers */,
+				0362D9BA2C2569150004E896 /* Views */,
+				0362D9BB2C25691A0004E896 /* ViewModels */,
 				0362D9B22C2567260004E896 /* Info.plist */,
 			);
 			path = LoanManagement;
-			sourceTree = "<group>";
-		};
-		0362D9B82C2569070004E896 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				0362D9C92C2579EF0004E896 /* Core */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		0362D9B92C25690F0004E896 /* Models */ = {
@@ -105,6 +106,8 @@
 		0362D9BA2C2569150004E896 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0362D9CA2C257A750004E896 /* LoanListViewController.swift */,
+				0362D9DA2C2696610004E896 /* LoanDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +115,8 @@
 		0362D9BB2C25691A0004E896 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0362D9D42C2661450004E896 /* LoanViewModel.swift */,
+				0362D9D82C2661AA0004E896 /* LoanListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -129,6 +134,8 @@
 		0362D9BD2C25692A0004E896 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				0362D9D62C2661750004E896 /* LoanListTableViewCell.swift */,
+				0362D9DE2C26CB650004E896 /* Constraint.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -142,14 +149,6 @@
 				0362D9A62C2567240004E896 /* SceneDelegate.swift */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		0362D9C92C2579EF0004E896 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				0362D9CA2C257A750004E896 /* LoanListViewController.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,12 +223,17 @@
 			files = (
 				0362D9C22C2579240004E896 /* Borrower.swift in Sources */,
 				0362D9A52C2567240004E896 /* AppDelegate.swift in Sources */,
+				0362D9DB2C2696610004E896 /* LoanDetailViewController.swift in Sources */,
 				0362D9C82C25796C0004E896 /* RepaymentSchedule.swift in Sources */,
 				0362D9C42C2579320004E896 /* Collateral.swift in Sources */,
+				0362D9D92C2661AA0004E896 /* LoanListViewModel.swift in Sources */,
 				0362D9CD2C2592B10004E896 /* Service.swift in Sources */,
 				0362D9C62C2579410004E896 /* Document.swift in Sources */,
 				0362D9CF2C2592B70004E896 /* Request.swift in Sources */,
+				0362D9D72C2661750004E896 /* LoanListTableViewCell.swift in Sources */,
 				0362D9A72C2567240004E896 /* SceneDelegate.swift in Sources */,
+				0362D9D52C2661450004E896 /* LoanViewModel.swift in Sources */,
+				0362D9DF2C26CB650004E896 /* Constraint.swift in Sources */,
 				0362D9D12C2593C00004E896 /* Endpoint.swift in Sources */,
 				0362D9CB2C257A750004E896 /* LoanListViewController.swift in Sources */,
 				0362D9D32C25E65D0004E896 /* LoanList.swift in Sources */,

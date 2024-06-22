@@ -8,5 +8,5 @@
 import Foundation
 
 enum Endpoint: String {
-    case loans = "api/json/loans.json"
+    case loans = "/api/json/loans.json"
 }

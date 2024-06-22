@@ -8,7 +8,7 @@
 import Foundation
 
 final class Request {
-    private struct Constants {
+    public struct Constants {
         static let baseUrl = "https://raw.githubusercontent.com/andreascandle/p2p_json_test/main"
     }
     
@@ -17,11 +17,9 @@ final class Request {
     
     private var urlString: String {
         var string = Constants.baseUrl
-        string += "/"
         string += endpoint.rawValue
         
         if !pathComponents.isEmpty {
-            string += "/"
             pathComponents.forEach {
                 string += "\($0)"
             }
