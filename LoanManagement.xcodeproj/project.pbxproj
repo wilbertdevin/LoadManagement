@@ -25,6 +25,7 @@
 		0362D9D92C2661AA0004E896 /* LoanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9D82C2661AA0004E896 /* LoanListViewModel.swift */; };
 		0362D9DB2C2696610004E896 /* LoanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9DA2C2696610004E896 /* LoanDetailViewController.swift */; };
 		0362D9DF2C26CB650004E896 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9DE2C26CB650004E896 /* Constraint.swift */; };
+		0362D9E12C27D8D20004E896 /* PopupImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0362D9E02C27D8D20004E896 /* PopupImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		0362D9D82C2661AA0004E896 /* LoanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListViewModel.swift; sourceTree = "<group>"; };
 		0362D9DA2C2696610004E896 /* LoanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDetailViewController.swift; sourceTree = "<group>"; };
 		0362D9DE2C26CB650004E896 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
+		0362D9E02C27D8D20004E896 /* PopupImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				0362D9CA2C257A750004E896 /* LoanListViewController.swift */,
 				0362D9DA2C2696610004E896 /* LoanDetailViewController.swift */,
+				0362D9E02C27D8D20004E896 /* PopupImageViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				0362D9DF2C26CB650004E896 /* Constraint.swift in Sources */,
 				0362D9D12C2593C00004E896 /* Endpoint.swift in Sources */,
 				0362D9CB2C257A750004E896 /* LoanListViewController.swift in Sources */,
+				0362D9E12C27D8D20004E896 /* PopupImageViewController.swift in Sources */,
 				0362D9D32C25E65D0004E896 /* LoanList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

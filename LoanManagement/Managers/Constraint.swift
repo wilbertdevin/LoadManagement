@@ -35,7 +35,7 @@ func layoutLabelsAndImageViews(labels: [UILabel], imageViews: [UIImageView], in 
     
     for imageView in imageViews {
         imageView.frame = CGRect(x: padding, 
-                                 y: yOffset + padding,
+                                 y: yOffset + padding - 20,
                                  width: 300,
                                  height: 250)
         
@@ -43,4 +43,15 @@ func layoutLabelsAndImageViews(labels: [UILabel], imageViews: [UIImageView], in 
     }
 }
 
+func setupViewConstraints(view: UIView, contentView: UIView, topAnchor: NSLayoutYAxisAnchor, constant: CGFloat = 0) {
+    view.translatesAutoresizingMaskIntoConstraints = false
+    contentView.addSubview(view)
+    
+    NSLayoutConstraint.activate([
+        view.topAnchor.constraint(equalTo: topAnchor, constant: constant),
+        view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+        view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+        view.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -10)
+    ])
+}
 

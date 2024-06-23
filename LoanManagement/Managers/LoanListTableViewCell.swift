@@ -20,7 +20,6 @@ class LoanListTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        // Configure and add labels to content view
         configureLabels()
         addLabelsToContentView()
         applyConstraints()

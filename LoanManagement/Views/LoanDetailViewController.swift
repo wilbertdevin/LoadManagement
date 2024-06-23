@@ -11,8 +11,6 @@ class LoanDetailViewController: UIViewController {
     
     private let viewModel: LoanViewModel
     private let baseURL = Request.Constants.baseUrl
-    
-    // Define labels and image views as properties
 
     private let borrowerNameLabel = UILabel()
     private let borrowerEmailLabel = UILabel()
@@ -20,10 +18,10 @@ class LoanDetailViewController: UIViewController {
     private let collateralTypeLabel = UILabel()
     private let collateralValueLabel = UILabel()
     private let documentsLabel = UILabel()
+    private let noDocumentsLabel = UILabel()
     private let repaymentText = UILabel()
     private let repaymentScheduleLabel = UILabel()
     
-    // Image views for displaying document images
     private var documentImageViews: [UIImageView] = []
     
     init(viewModel: LoanViewModel) {
@@ -50,21 +48,25 @@ class LoanDetailViewController: UIViewController {
         collateralValueLabel.text = viewModel.collateralValue
         repaymentScheduleLabel.text = viewModel.repaymentSchedule.joined(separator: "\n")
 
-        // Bold attributed string for "Repayment Schedule: "
+        // Bold font for "Repayment Schedule: "
         let boldTextRepayment = "\nRepayment Schedule: "
         let attributedStringRepayment = NSMutableAttributedString(string: boldTextRepayment)
         attributedStringRepayment.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: repaymentText.font.pointSize), range: NSRange(location: 0, length: boldTextRepayment.count))
         repaymentText.attributedText = attributedStringRepayment
 
-        // Bold attributed string for "Documents: "
+        // Bold font for "Documents: "
         let boldTextDocuments = "Documents: "
         let attributedStringDocuments = NSMutableAttributedString(string: boldTextDocuments)
         attributedStringDocuments.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: documentsLabel.font.pointSize), range: NSRange(location: 0, length: boldTextDocuments.count))
         documentsLabel.attributedText = attributedStringDocuments
 
+        // No documents label
+        noDocumentsLabel.text = "No Document Available"
+        noDocumentsLabel.textAlignment = .center
+        noDocumentsLabel.isHidden = true
         
         // Add labels to the view
-        let labels = [borrowerNameLabel, borrowerEmailLabel, borrowerCreditScoreLabel, collateralTypeLabel, collateralValueLabel, repaymentText, repaymentScheduleLabel, documentsLabel]
+        let labels = [borrowerNameLabel, borrowerEmailLabel, borrowerCreditScoreLabel, collateralTypeLabel, collateralValueLabel, repaymentText, repaymentScheduleLabel, documentsLabel, noDocumentsLabel]
         
         labels.forEach { label in
             label.numberOfLines = 0
@@ -82,38 +84,68 @@ class LoanDetailViewController: UIViewController {
             documentImageViews.append(imageView)
         }
         
-        // Layout labels and image views using utility function
+        // Layout labels and image views
         layoutLabelsAndImageViews(labels: labels, imageViews: documentImageViews, in: view, padding: 10)
         
         // Load images from URLs
         loadDocumentImages()
     }
-    
+
     private func loadDocumentImages() {
-        for (index, documentURL) in viewModel.documents.enumerated() {
-            guard let url = URL(string: baseURL + documentURL) else {
-                continue
+            guard !viewModel.documents.isEmpty else {
+                noDocumentsLabel.isHidden = false
+                return
+            }
+
+            var validDocumentsCount = 0
+            
+            for (index, documentURL) in viewModel.documents.enumerated() {
+                guard let url = URL(string: baseURL + documentURL) else {
+                    continue
+                }
+                
+                // Fetch image from URL asynchronously
+                URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+                    if let error = error {
+                        print("Error fetching image: \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    guard let data = data, let image = UIImage(data: data) else {
+                        print("Invalid image data")
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        let imageView = self?.documentImageViews[index]
+                        imageView?.image = image
+                        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self?.imageTapped(_:)))
+                        imageView?.isUserInteractionEnabled = true
+                        imageView?.addGestureRecognizer(tapGesture)
+                        validDocumentsCount += 1
+                        
+                        // Hide the "No Document Available" label if there's at least one valid document
+                        if validDocumentsCount > 0 {
+                            self?.noDocumentsLabel.isHidden = true
+                        }
+                    }
+                }.resume()
             }
             
-            // Fetch image from URL asynchronously
-            URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
-                if let error = error {
-                    print("Error fetching image: \(error.localizedDescription)")
-                    return
-                }
-                
-                guard let data = data, let image = UIImage(data: data) else {
-                    print("Invalid image data")
-                    return
-                }
-                
+            // Show "No Document Available" label if no valid documents found
+            if validDocumentsCount == 0 {
                 DispatchQueue.main.async {
-                    self?.documentImageViews[index].image = image
+                    self.noDocumentsLabel.isHidden = false
                 }
-            }.resume()
+            }
+        }
+
+    @objc private func imageTapped(_ sender: UITapGestureRecognizer) {
+        if let imageView = sender.view as? UIImageView, let image = imageView.image {
+            let popupVC = PopupImageViewController(image: image)
+            popupVC.modalPresentationStyle = .overCurrentContext
+            popupVC.modalTransitionStyle = .crossDissolve
+            present(popupVC, animated: true, completion: nil)
         }
     }
 }
-
-
-
