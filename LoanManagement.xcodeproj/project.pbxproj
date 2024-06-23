@@ -101,6 +101,7 @@
 				0362D9C32C2579320004E896 /* Collateral.swift */,
 				0362D9C52C2579410004E896 /* Document.swift */,
 				0362D9C72C25796C0004E896 /* RepaymentSchedule.swift */,
+				0362D9D42C2661450004E896 /* LoanViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,7 +119,6 @@
 		0362D9BB2C25691A0004E896 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				0362D9D42C2661450004E896 /* LoanViewModel.swift */,
 				0362D9D82C2661AA0004E896 /* LoanListViewModel.swift */,
 			);
 			path = ViewModels;
