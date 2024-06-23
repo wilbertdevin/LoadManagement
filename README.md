@@ -1,0 +1,1 @@
+This project is an iOS Developer Test where it is a simple iOS application that displays a list of loans fetched from an API. It allows the users to searc for loans, sort them alphabetically, by term, or by risk rating, and view detailed information about each loan.
