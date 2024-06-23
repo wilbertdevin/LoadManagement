@@ -32,24 +32,21 @@ class LoanListTableViewCell: UITableViewCell {
     func configure(with viewModel: LoanViewModel) {
         amountLabel.text = viewModel.amount
         interestRateLabel.text = viewModel.interestRate
-        termLabel.text = viewModel.term
+        termLabel.text = viewModel.termString
         purposeLabel.text = viewModel.purpose
         riskRatingLabel.text = viewModel.riskRating
-        
-        // Set borrowerName label with bold text
-        let borrowerNameAttributedString = NSMutableAttributedString(string: viewModel.borrowerName)
-        let boldFontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: borrowerNameLabel.font.pointSize)]
-        borrowerNameAttributedString.addAttributes(boldFontAttribute, range: NSRange(location: 0, length: viewModel.borrowerName.count))
-        borrowerNameLabel.attributedText = borrowerNameAttributedString
-        
+        borrowerNameLabel.text = viewModel.borrowerName
     }
-    
+
     private func configureLabels() {
-        [amountLabel, interestRateLabel, termLabel, purposeLabel, riskRatingLabel, borrowerNameLabel].forEach {
-            $0.numberOfLines = 0
+        let labels = [amountLabel, interestRateLabel, termLabel, purposeLabel, riskRatingLabel, borrowerNameLabel]
+        
+        for label in labels {
+            label.numberOfLines = 0
+            label.font = UIFont.systemFont(ofSize: 14)
         }
+        borrowerNameLabel.font = UIFont.boldSystemFont(ofSize: 16)
     }
-    
     private func addLabelsToContentView() {
         contentView.addSubview(amountLabel)
         contentView.addSubview(interestRateLabel)
@@ -81,8 +78,3 @@ class LoanListTableViewCell: UITableViewCell {
         }
     }
 }
-
-
-
-
-

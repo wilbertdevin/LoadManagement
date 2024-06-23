@@ -24,7 +24,6 @@ final class Request {
                 string += "\($0)"
             }
         }
-        
         return string
     }
     

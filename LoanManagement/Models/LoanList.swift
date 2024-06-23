@@ -19,11 +19,3 @@ struct LoanList: Codable {
     let documents: [Document]
     let repaymentSchedule: RepaymentSchedule
 }
-
-
-
-
-
-
-
-

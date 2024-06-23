@@ -15,10 +15,9 @@ func setupLabelConstraints(label: UILabel, contentView: UIView, topAnchor: NSLay
         label.topAnchor.constraint(equalTo: topAnchor, constant: constant),
         label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
         label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-        label.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -10) // Ensure it doesn't overlap the cell bottom
+        label.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -10) 
     ])
 }
-
 
 func layoutLabelsAndImageViews(labels: [UILabel], imageViews: [UIImageView], in view: UIView, padding: CGFloat) {
     var yOffset: CGFloat = 110
@@ -54,4 +53,3 @@ func setupViewConstraints(view: UIView, contentView: UIView, topAnchor: NSLayout
         view.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -10)
     ])
 }
-

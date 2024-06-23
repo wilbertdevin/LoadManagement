@@ -11,7 +11,10 @@ struct LoanViewModel {
     let id: String
     let amount: String
     let interestRate: String
-    let term: String
+    let term: Int
+    var termString: String { 
+        return "Term: \(term) months"
+    }
     let purpose: String
     let riskRating: String
     let borrowerName: String
@@ -26,7 +29,7 @@ struct LoanViewModel {
         self.id = loan.id
         self.amount = "Amount: \(loan.amount)"
         self.interestRate = "Interest Rate: \(loan.interestRate)"
-        self.term = "Term: \(loan.term) months"
+        self.term = loan.term
         self.purpose = "Purpose: \(loan.purpose)"
         self.riskRating = "Risk Rating: \(loan.riskRating)"
         self.borrowerName = loan.borrower.name

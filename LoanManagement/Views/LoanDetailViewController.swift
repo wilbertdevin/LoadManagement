@@ -37,6 +37,9 @@ class LoanDetailViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "Loan Details"
+        
+        navigationController?.navigationBar.tintColor = .white
+
         setupLabels()
     }
     
@@ -47,18 +50,8 @@ class LoanDetailViewController: UIViewController {
         collateralTypeLabel.text = viewModel.collateralType
         collateralValueLabel.text = viewModel.collateralValue
         repaymentScheduleLabel.text = viewModel.repaymentSchedule.joined(separator: "\n")
-
-        // Bold font for "Repayment Schedule: "
-        let boldTextRepayment = "\nRepayment Schedule: "
-        let attributedStringRepayment = NSMutableAttributedString(string: boldTextRepayment)
-        attributedStringRepayment.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: repaymentText.font.pointSize), range: NSRange(location: 0, length: boldTextRepayment.count))
-        repaymentText.attributedText = attributedStringRepayment
-
-        // Bold font for "Documents: "
-        let boldTextDocuments = "Documents: "
-        let attributedStringDocuments = NSMutableAttributedString(string: boldTextDocuments)
-        attributedStringDocuments.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: documentsLabel.font.pointSize), range: NSRange(location: 0, length: boldTextDocuments.count))
-        documentsLabel.attributedText = attributedStringDocuments
+        repaymentText.text = "\nRepayment Schedule: "
+        documentsLabel.text = "Documents"
 
         // No documents label
         noDocumentsLabel.text = "No Document Available"
@@ -71,15 +64,18 @@ class LoanDetailViewController: UIViewController {
         labels.forEach { label in
             label.numberOfLines = 0
             label.lineBreakMode = .byWordWrapping
+            label.font = UIFont.systemFont(ofSize: 14)
             view.addSubview(label)
         }
+        repaymentText.font = UIFont.boldSystemFont(ofSize: 14)
+        documentsLabel.font = UIFont.boldSystemFont(ofSize: 14)
         
         // Create image views for documents
         viewModel.documents.forEach { documentURL in
             let imageView = UIImageView()
             imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
-            imageView.backgroundColor = .systemBackground // Placeholder color
+            imageView.backgroundColor = .systemBackground
             view.addSubview(imageView)
             documentImageViews.append(imageView)
         }
