@@ -110,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				0362D9CA2C257A750004E896 /* LoanListViewController.swift */,
+				0362D9D62C2661750004E896 /* LoanListTableViewCell.swift */,
 				0362D9DA2C2696610004E896 /* LoanDetailViewController.swift */,
 				0362D9E02C27D8D20004E896 /* PopupImageViewController.swift */,
 			);
@@ -137,7 +138,6 @@
 		0362D9BD2C25692A0004E896 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				0362D9D62C2661750004E896 /* LoanListTableViewCell.swift */,
 				0362D9DE2C26CB650004E896 /* Constraint.swift */,
 			);
 			path = Managers;
